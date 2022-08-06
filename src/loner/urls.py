@@ -18,8 +18,8 @@ admin.autodiscover()
 urlpatterns = [
     path('admin/login/', views.admin_login, name='admin-login'),
     path('admin/', admin.site.urls, name='admin'),
-    path('user/', include('user.urls')),
-    path('mafia/', include('mafia.urls')),
+    path('user/', include('src.apps.user.urls')),
+    path('mafia/', include('src.apps.mafia.urls')),
 
 ]
 

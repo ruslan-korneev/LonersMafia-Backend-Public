@@ -7,7 +7,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 
 from rest_framework import status
 
-from utils.customfields import ContentTypeRestrictedFileField
+from src.apps.utils.customfields import ContentTypeRestrictedFileField
 
 
 # custom manager

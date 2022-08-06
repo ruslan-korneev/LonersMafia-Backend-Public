@@ -4,8 +4,8 @@ from ipware import get_client_ip
 
 from . import exceptions
 
-from mafia.models import Moderator, BanUserFromMafia
-from user.models import User, BlacklistedIp
+from src.apps.mafia.models import Moderator, BanUserFromMafia
+from src.apps.user.models import User, BlacklistedIp
 
 
 

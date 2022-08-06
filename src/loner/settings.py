@@ -28,11 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # TODO: SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.get_value('SECRET_KEY', default='django-insecure-)scsh6_myslqst35cyvnv2@^0a-z7^zaw=r#b7*tai2z5%ypzz')
+SECRET_KEY = env.get_value('SECRET_KEY', default='@^0a-z7^zaw=r#b7*tai2z5%ypzz')
 
 # TODO: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = False
+DEBUG = bool(env.get_value('DEBUG', default=1))
 
 USESQLITE_DEV=False # to use sqlite database set this to true in development, to use sqlite
 
@@ -91,8 +91,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # apps
-    'user',
-    'mafia',
+    'src.apps.user',
+    'src.apps.mafia',
 ]
 
 AUTH_USER_MODEL = "user.User" 
@@ -128,7 +128,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'loner.urls'
+ROOT_URLCONF = 'src.loner.urls'
 
 
 DEFAULT_RENDERER_CLASSES = ( # don't provide browsable API in production
@@ -181,8 +181,8 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'loner.wsgi.application'
-ASGI_APPLICATION = 'loner.asgi.application'
+# WSGI_APPLICATION = 'src.loner.wsgi.application'
+ASGI_APPLICATION = 'src.loner.asgi.application'
 
 
 # Database

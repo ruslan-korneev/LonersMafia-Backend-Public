@@ -20,9 +20,9 @@ from channels.security.websocket import AllowedHostsOriginValidator
 
 from channels.auth import AuthMiddlewareStack
 
-import mafia.routing
+from src.apps.mafia import routing
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'loner.settings') # if wsgi is not imported first then move this above mafia.routing, this will set settings path to env variable
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'src.loner.settings') # if wsgi is not imported first then move this above mafia.routing, this will set settings path to env variable
 
 
 application = ProtocolTypeRouter({
@@ -30,7 +30,7 @@ application = ProtocolTypeRouter({
     "websocket": AllowedHostsOriginValidator( 
                 AuthMiddlewareStack(
                     URLRouter(
-                        mafia.routing.websocket_urlpatterns
+                        routing.websocket_urlpatterns
                      )
                 )
             ),

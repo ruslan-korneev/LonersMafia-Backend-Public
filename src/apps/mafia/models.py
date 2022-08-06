@@ -9,7 +9,7 @@ from django.core.exceptions import ValidationError
 
 from rest_framework import status
 
-from utils.customfields import ContentTypeRestrictedFileField
+from src.apps.utils.customfields import ContentTypeRestrictedFileField
 # Create your models here.
 
 mafia_name_validator = RegexValidator(regex='^[a-zA-Z][a-zA-Z0-9_-]+$', message='can contain only alpha numeric and -, _ and must begin with alphabet', code=status.HTTP_400_BAD_REQUEST)

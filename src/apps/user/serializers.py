@@ -4,7 +4,7 @@ from django.core.exceptions import ValidationError
 from rest_framework import status, serializers
 
 from .models import User, BlacklistedIp
-from utils.customserializers import DynamicFieldsModelSerializer
+from src.apps.utils.customserializers import DynamicFieldsModelSerializer
 
 from django.conf import settings
 

@@ -10,9 +10,8 @@ from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
 from rest_framework import generics, mixins, status, permissions
 
-from utils.permissions import AnyOneButBannedPermission, ModeratorPermission, OnlyRegisteredPermission, IsStaffPermission
+from src.apps.utils.permissions import AnyOneButBannedPermission, ModeratorPermission, OnlyRegisteredPermission, IsStaffPermission
 
-from user.models import User
 from .models import Moderator, Reaction, Rule, Mafia, Message, BanUserFromMafia
 from .serializers import ModeratorSerializer, ReactionSerializer, RuleSerializer, MafiaSerializer, MessageSerializer
 

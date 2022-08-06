@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib import messages
 
-from user.models import BlacklistedIp
+from src.apps.user.models import BlacklistedIp
 
 from . models import Mafia, Message, Reaction, Rule, Moderator, BanUserFromMafia
 # Register your models here.

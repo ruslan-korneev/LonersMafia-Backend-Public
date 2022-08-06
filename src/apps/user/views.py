@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import generics, mixins, status, permissions
 
-from utils.permissions import AnyOneButBannedPermission, IsStaffPermission, IsUsersObjectPermission
+from src.apps.utils.permissions import AnyOneButBannedPermission, IsStaffPermission, IsUsersObjectPermission
 
 from .models import User, BlacklistedIp
 from .serializers import BanUserSerializer, UserCreateSerializer, UserLoginSerializer, UserSerializer

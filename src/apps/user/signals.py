@@ -3,7 +3,7 @@ from django.db.models.signals import post_save
 
 from . import models
 
-from mafia.models import Message
+from src.apps.mafia.models import Message
 
 
 @receiver(post_save, sender=models.User)

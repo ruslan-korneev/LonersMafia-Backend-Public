@@ -3,11 +3,11 @@ from collections import OrderedDict
 from django.forms import ValidationError
 from rest_framework import serializers, status
 
-from utils.customserializers import DynamicFieldsModelSerializer
+from src.apps.utils.customserializers import DynamicFieldsModelSerializer
 
 from . import models
-from user.models import User
-from user.serializers import UserSerializer
+from src.apps.user.models import User
+from src.apps.user.serializers import UserSerializer
 
 
 REACTIONS = ['🚀', '😭', '🤣', '👎']

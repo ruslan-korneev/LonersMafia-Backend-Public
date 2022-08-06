@@ -14,7 +14,7 @@ from channels.generic.websocket import AsyncWebsocketConsumer
 # from django.db.models.signals import post_save
 
 from .models import Message, Mafia, BanUserFromMafia
-from user.models import BlacklistedIp
+from src.apps.user.models import BlacklistedIp
 # from .serializers import MessagesSerializer
 
 User = get_user_model()
