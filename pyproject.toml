@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "mafia-django-channels"
+version = "0.1.0"
+description = ""
+authors = ["Ruslan Korneev <kornerus@fjfi.cvut.cz>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "4.0.6"
+Pillow = "9.2.0"
+daphne = "3.0.2"
+channels = "3.0.5"
+django-ipware = "4.0.2"
+django-environ = "0.9.0"
+channels-redis = "3.4.1"
+psycopg2-binary = "2.9.3"
+djangorestframework = "3.13.1"
+django-cors-headers = "3.13.0"
+gunicorn = "20.1.0"
+supervisor = "4.2.4"
+boto3 = "1.24.43"
+django-storages = "1.12.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

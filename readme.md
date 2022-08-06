@@ -17,71 +17,74 @@ Please read [Reporting bugs](https://github.com/PaulleDemon/LonersMafia-support/
 
 ```
 .
-├── privacy_terms/
-│   ├── __init__.py
-│   ├── views.py
-│   ├── admin.py
-│   ├── apps.py
-│   └── models.py
-├── loner/
-│   ├── __init__.py
-│   ├── views.py
-│   ├── s3storage.py
-│   ├── urls.py
-│   ├── auth_middleware.py
-│   ├── asgi.py
-│   ├── wsgi.py
-│   └── settings.py
-├── promoted/
-│   ├── __init__.py
-│   ├── views.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── tests.py
-│   └── models.py
-├── manage.py
+├── readme.md
+├── Procfile
 ├── license.txt
 ├── .ebignore
-├── templates/
-│   ├── css
-│   ├── html
-│   ├── js
-│   └── admin-login/
-│       ├── admin-index.css
-│       └── admin-index.html
-├── utils/
-│   ├── pagination.py
-│   ├── updp.py
-│   ├── exceptions.py
-│   ├── customserializers.py
-│   ├── customfields.py
-│   └── permissions.py
-├── readme.md
-├── .vscode/
-│   └── settings.json
-├── Procfile
-├── mafia/
-│   ├── __init__.py
-│   ├── views.py
-│   ├── serializers.py
-│   ├── routing.py
-│   ├── urls.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── consumers.py
-│   ├── signals.py
-│   └── models.py
-├── user/
-│   ├── __init__.py
-│   ├── views.py
-│   ├── serializers.py
-│   ├── urls.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── signals.py
-│   └── models.py
-├── requirements.txt
+├── pyproject.toml
 └── .gitignore
+├── src/
+│   ├── manage.py
+
+│   ├── loner/
+│   │   ├── __init__.py
+│   │   ├── views.py
+│   │   ├── s3storage.py
+│   │   ├── urls.py
+│   │   ├── auth_middleware.py
+│   │   ├── asgi.py
+│   │   ├── wsgi.py
+│   │   └── settings.py
+│   │
+│   ├── templates/
+│   │   ├── css
+│   │   ├── html
+│   │   ├── js
+│   │   └── admin-login/
+│   │       ├── admin-index.css
+│   │       └── admin-index.html
+│   │
+│   ├── apps/
+│   │   ├─ privacy_terms/
+│   │   │   ├── __init__.py
+│   │   │   ├── views.py
+│   │   │   ├── admin.py
+│   │   │   ├── apps.py
+│   │   │   └── models.py
+│   │   ├── promoted/
+│   │   │   ├── __init__.py
+│   │   │   ├── views.py
+│   │   │   ├── admin.py
+│   │   │   ├── apps.py
+│   │   │   ├── tests.py
+│   │   │   └── models.py
+│   │   ├── utils/
+│   │   │   ├── pagination.py
+│   │   │   ├── updp.py
+│   │   │   ├── exceptions.py
+│   │   │   ├── customserializers.py
+│   │   │   ├── customfields.py
+│   │   │   └── permissions.py
+│   │   ├── mafia/
+│   │   │   ├── __init__.py
+│   │   │   ├── views.py
+│   │   │   ├── serializers.py
+│   │   │   ├── routing.py
+│   │   │   ├── urls.py
+│   │   │   ├── admin.py
+│   │   │   ├── apps.py
+│   │   │   ├── consumers.py
+│   │   │   ├── signals.py
+│   │   │   └── models.py
+│   │   ├── user/
+│   │   │   ├── __init__.py
+│   │   │   ├── views.py
+│   │   │   ├── serializers.py
+│   │   │   ├── urls.py
+│   │   │   ├── admin.py
+│   │   │   ├── apps.py
+│   │   │   ├── signals.py
+└───└───└───└── models.py
 ```
 
 Read the inspiration behind loners mafia: [story behind lonersmafia](https://github.com/PaulleDemon/PaulleDemon/blob/main/stories.md#lonersmafia---lonersmafiacom)
