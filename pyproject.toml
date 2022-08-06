@@ -3,6 +3,9 @@ name = "mafia-django-channels"
 version = "0.1.0"
 description = ""
 authors = ["Ruslan Korneev <kornerus@fjfi.cvut.cz>"]
+packages = [
+    {include = "src"}
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -20,9 +23,18 @@ gunicorn = "20.1.0"
 supervisor = "4.2.4"
 boto3 = "1.24.43"
 django-storages = "1.12.3"
+django-stubs = "^1.12.0"
 
 [tool.poetry.dev-dependencies]
+djangorestframework-stubs = "^1.7.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.django-stubs]
+django_settings_module = "src.loner.settings"
+ignore_missing_model_attributes = true
+
+[tool.poetry.scripts]
+altaport = "src.manage:main"
